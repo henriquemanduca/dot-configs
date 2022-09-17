@@ -81,11 +81,9 @@ function update-fish-repo
     rsync -av ~/.config/fish/config.fish ~/Projetos/pessoal/dot-configs/ 
     git -C ~/Projetos/pessoal/dot-configs add config.fish
     git -C ~/Projetos/pessoal/dot-configs commit -m "Update"
+    git -C ~/Projetos/pessoal/dot-configs push
 end
 
-function update-code-repo
-    rsync -av ~/.config/fish/config.fish ~/Projetos/pessoal/dot-configs/
-end
 
 # DOCKER ------------------------------------
 alias dk='docker'

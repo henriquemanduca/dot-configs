@@ -38,6 +38,8 @@ alias hts='kate /etc/hosts'
 # Apt ---------------------------------------
 alias up='sudo apt update'
 alias upl='apt list --upgradable'
+
+alias upu='sudo apt upgrade'
 alias upd='sudo apt dist-upgrade'
 
 alias upclean='sudo apt clean && sudo apt autoclean && sudo apt autoremove --purge'

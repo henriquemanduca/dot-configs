@@ -2,7 +2,7 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# Bins  -------------------------------
+# Bins  ------------------------------
 
 # Detekt
 fish_add_path /home/henrique/Programas/detekt-cli-1.21.0/bin/
@@ -12,11 +12,13 @@ oh-my-posh --init --shell fish --config ~/.poshthemes/blue-owl.omp.json | source
 alias src='source ~/.config/fish/config.fish'
 alias edit-fish='code ~/.config/fish/config.fish'
 
-# Apps --------------------------------------
+# Apps --------------------------------
+
 alias g='git'
 alias detekt-html='detekt-cli -r html:/home/henrique/detekt-reports/detekt.html'
 
-# Commands ----------------------------------
+# Commands -----------------------------
+
 alias cl='clear'
 
 alias rm='rm -i'          # confirm removal
@@ -32,10 +34,11 @@ alias htg='history | grep'
 alias fpid='ps aux | grep -i'
 alias kid='sudo kill -9'  # -9: SIGKILL
 
-# Configs -----------------------------------
+# Configs -----------------------------
 alias hts='kate /etc/hosts'
 
-# Apt ---------------------------------------
+# Apt ---------------------------------
+
 alias up='sudo apt update'
 alias upl='apt list --upgradable'
 
@@ -47,7 +50,8 @@ alias upclean='sudo apt clean && sudo apt autoclean && sudo apt autoremove --pur
 alias insta='sudo apt install'
 alias instd='sudo dpkg -i'
 
-# Folders -----------------------------------
+# Folders -----------------------------
+
 alias ..='cd ..'
 alias ...='cd ../..'
 
@@ -77,7 +81,7 @@ function bkp
     sudo rsync -aAXv . --delete --exclude={/dev/*,/lost+found}  /backup
 end
 
-# Repos -------------------------------------
+# Repos -----------------------------
 
 function update-fish-repo
     rsync -av ~/.config/fish/config.fish ~/Projetos/pessoal/dot-configs/ 
@@ -86,8 +90,8 @@ function update-fish-repo
     git -C ~/Projetos/pessoal/dot-configs push
 end
 
+# DOCKER -----------------------------
 
-# DOCKER ------------------------------------
 alias dk='docker'
 alias dks='docker start'
 alias dkt='docker stop'
@@ -106,13 +110,15 @@ function ptsp
     home
 end
 
-# Kubernets ----------------------------------
+# Kubernets -----------------------------
+
 alias skaf='skaffold dev --port-forward'
 alias skafb='skaffold build'
 
 alias kbip2='kubectl get svc'
 
 # Node ----------------------------------
+
 alias nrs='npm run start'
 alias rmnm='rm -Rf node_modules/ && rm package-lock.json'
 

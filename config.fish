@@ -12,6 +12,9 @@ oh-my-posh --init --shell fish --config ~/.poshthemes/blue-owl.omp.json | source
 alias src='source ~/.config/fish/config.fish'
 alias edit-fish='code ~/.config/fish/config.fish'
 
+# Configs -----------------------------
+alias edit-hosts='kate /etc/hosts'
+
 # Apps --------------------------------
 
 alias g='git'
@@ -33,9 +36,6 @@ alias htg='history | grep'
 
 alias fpid='ps aux | grep -i'
 alias kid='sudo kill -9'  # -9: SIGKILL
-
-# Configs -----------------------------
-alias hts='kate /etc/hosts'
 
 # Apt ---------------------------------
 

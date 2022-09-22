@@ -10,14 +10,15 @@ fish_add_path /home/henrique/Programas/detekt-cli-1.21.0/bin/
 oh-my-posh --init --shell fish --config ~/.poshthemes/blue-owl.omp.json | source
 
 alias src='source ~/.config/fish/config.fish'
-alias edit-fish='code ~/.config/fish/config.fish'
+alias edit-fish='nvim ~/.config/fish/config.fish'
 
 # Configs -----------------------------
-alias edit-hosts='kate /etc/hosts'
+alias edit-hosts='sudo nvim /etc/hosts'
 
 # Apps --------------------------------
 
 alias g='git'
+alias v='nvim'
 alias detekt-html='detekt-cli -r html:/home/henrique/detekt-reports/detekt.html'
 
 # Commands -----------------------------

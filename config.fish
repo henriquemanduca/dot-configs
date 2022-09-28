@@ -9,19 +9,27 @@ fish_add_path /home/henrique/Programas/detekt-cli-1.21.0/bin/
 
 oh-my-posh --init --shell fish --config ~/.poshthemes/blue-owl.omp.json | source
 
+# Configs -----------------------------
 alias src='source ~/.config/fish/config.fish'
 alias edit-fish='nvim ~/.config/fish/config.fish'
-
-# Configs -----------------------------
 alias edit-hosts='sudo nvim /etc/hosts'
+alias edit-nvim='nvim ~/.config/nvim/init.vim'
 
 # Apps --------------------------------
 
 alias g='git'
+alias gn='gitnow'
 alias v='nvim'
+alias lz='lazygit'
 alias detekt-html='detekt-cli -r html:/home/henrique/detekt-reports/detekt.html'
 
 # Commands -----------------------------
+
+alias l='ls'
+alias ll='ls -lh'
+alias la='ls -lah'
+alias lr='ls -R'
+alias lh='ls -d .*'
 
 alias cl='clear'
 
@@ -58,6 +66,7 @@ alias ...='cd ../..'
 
 function home
     cd ~
+    clear
 end
 
 function projs

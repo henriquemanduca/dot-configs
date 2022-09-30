@@ -84,11 +84,11 @@ function soft
 end
 
 function bkpd
-    sudo rsync -aAXv . --dry-run --delete --exclude={/dev/*,/lost+found}  /backup
+    sudo rsync -aAXv . --dry-run --delete --exclude={/.git,/node_modules,/lost+found} ~/Projetos/backup > backup.log
 end
 
 function bkp
-    sudo rsync -aAXv . --delete --exclude={/dev/*,/lost+found}  /backup
+    sudo rsync -aAXv . --delete --exclude={/.git,/node_modules,/lost+found} ~/Projetos/backup > backup.log
 end
 
 # Repos -----------------------------
@@ -134,3 +134,4 @@ alias rmnm='rm -Rf node_modules/ && rm package-lock.json'
 
 alias ni='npm install'
 alias nif='npm install --force'
+

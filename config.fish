@@ -12,7 +12,7 @@ oh-my-posh --init --shell fish --config ~/.poshthemes/blue-owl.omp.json | source
 # Configs -----------------------------
 alias src='source ~/.config/fish/config.fish'
 alias edit-fish='nvim ~/.config/fish/config.fish'
-alias edit-hosts='sudo nvim /etc/hosts'
+alias edit-hosts='nvim /etc/hosts'
 alias edit-nvim='nvim ~/.config/nvim/init.vim'
 
 # Apps --------------------------------

@@ -12,7 +12,7 @@ oh-my-posh --init --shell fish --config ~/.poshthemes/blue-owl.omp.json | source
 # Configs -----------------------------
 alias src='source ~/.config/fish/config.fish'
 alias edit-fish='nvim ~/.config/fish/config.fish'
-alias edit-hosts='nvim /etc/hosts'
+alias edit-hosts='sudo nvim /etc/hosts'
 alias edit-nvim='nvim ~/.config/nvim/init.vim'
 
 # Apps --------------------------------
@@ -122,8 +122,8 @@ end
 
 # Kubernets -----------------------------
 
-alias skaf='skaffold dev --port-forward'
-alias skafb='skaffold build'
+alias skaf='clear && skaffold dev --port-forward'
+alias skafb='clear && skaffold build'
 
 alias kbip2='kubectl get svc'
 

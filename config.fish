@@ -48,8 +48,8 @@ alias kid='sudo kill -9'  # -9: SIGKILL
 
 # Apt ---------------------------------
 
-alias up='sudo apt update'
-alias upl='apt list --upgradable'
+alias up='clear && sudo apt update'
+alias upl='clear && apt list --upgradable'
 
 alias upu='sudo apt upgrade'
 alias upd='sudo apt dist-upgrade'
@@ -125,7 +125,12 @@ end
 alias skaf='clear && skaffold dev --port-forward'
 alias skafb='clear && skaffold build'
 
-alias kbip2='kubectl get svc'
+alias ksvc='kubectl get svc'
+
+alias hpods='kubectl --kubeconfig kubectl_config_hml.conf get pods'
+alias hlogs='kubectl --kubeconfig kubectl_config_hml.conf logs'
+alias hdesc='kubectl --kubeconfig kubectl_config_hml.conf describe pod'
+alias hrest='kubectl --kubeconfig kubectl_config_hml.conf rollout restart deployment '
 
 # Node ----------------------------------
 

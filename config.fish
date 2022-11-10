@@ -127,6 +127,11 @@ alias skafb='clear && skaffold build'
 
 alias ksvc='kubectl get svc'
 
+alias lpods='kubectl get pods'
+alias llogs='kubectl logs '
+alias ldesc='kubectl describe pod '
+alias lrest='kubectl rollout restart deployment '
+
 alias hpods='kubectl --kubeconfig kubectl_config_hml.conf get pods'
 alias hlogs='kubectl --kubeconfig kubectl_config_hml.conf logs'
 alias hdesc='kubectl --kubeconfig kubectl_config_hml.conf describe pod'

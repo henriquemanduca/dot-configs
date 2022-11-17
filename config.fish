@@ -80,7 +80,7 @@ end
 
 function soft
     projs
-    cd softfocus/
+    cd softfocus2/
 end
 
 function bkpd
@@ -100,11 +100,17 @@ function update-fish-repo
     git -C ~/Projetos/pessoal/dot-configs push
 end
 
+function update-keepass-repo
+    git -C /home/henrique/Projetos/pessoal/keepass add manduca.kdbx
+    git -C /home/henrique/Projetos/pessoal/keepass commit -m "Update"
+    git -C /home/henrique/Projetos/pessoal/keepass push
+end
+
 # DOCKER -----------------------------
 
 alias dk='docker'
-alias dks='docker start'
-alias dkt='docker stop'
+alias dkst='docker start'
+alias dksp='docker stop'
 
 function ptst
    soft
@@ -139,9 +145,15 @@ alias hrest='kubectl --kubeconfig kubectl_config_hml.conf rollout restart deploy
 
 # Node ----------------------------------
 
-alias nrs='npm run start'
+alias nrst='npm run start'
 alias rmnm='rm -Rf node_modules/ && rm package-lock.json'
 
 alias ni='npm install'
 alias nif='npm install --force'
+
+# Kasper -------------------------------
+
+alias kaspSu='sudo systemctl status kesl'
+alias kaspSp='sudo systemctl stop kesl'
+alias kaspSt='sudo systemctl restart kesl'
 

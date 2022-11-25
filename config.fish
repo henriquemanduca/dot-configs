@@ -71,6 +71,10 @@ function home
     clear
 end
 
+function hm
+    home
+end
+
 function Projetos
     cd ~/Projetos/
 end
@@ -80,7 +84,7 @@ function pessoal
     cd pessoal/
 end
 
-function softfocus2
+function soft
     Projetos
     cd softfocus2/
 end
@@ -214,14 +218,18 @@ function hrollf
     hroll (string split ' ' (hpodsf $argv))[1]    
 end
 
+# MVN -----------------------------------
+
+alias mvn-w='mvn wrapper:wrapper'
+alias mvn-c='mvn compile jib:dockerBuild'
 
 # Node ----------------------------------
 
-alias nrst='npm run start'
-alias rmnm='rm -Rf node_modules/ && rm package-lock.json'
+alias npm-st='npm run start'
+alias rm-nm='rm -Rf node_modules/ && rm package-lock.json'
 
-alias ni='npm install'
-alias nif='npm install --force'
+alias npm-i='npm install'
+alias npm-if='npm install --force'
 
 # Kasper -------------------------------
 

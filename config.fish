@@ -236,9 +236,8 @@ alias npm-if='npm install --force'
 alias ng-b='ng build'
 alias ng-bw='ng build --wath'
 
-
 # Kasper -------------------------------
 
-alias kaspSu='sudo systemctl status kesl'
-alias kaspSp='sudo systemctl stop kesl'
-alias kaspSt='sudo systemctl restart kesl'
+alias kasp-su='sudo systemctl status kesl'
+alias kasp-sp='sudo systemctl stop kesl'
+alias kasp-sr='sudo systemctl restart kesl'

@@ -11,7 +11,7 @@ oh-my-posh --init --shell fish --config ~/.poshthemes/blue-owl.omp.json | source
 
 # Configs -----------------------------
 alias src='source ~/.config/fish/config.fish && cl'
-alias ed-fish='nvim ~/.config/fish/config.fish'
+alias ed-fish='code ~/.config/fish/config.fish'
 alias ed-fish-code='code ~/.config/fish/config.fish'
 alias ed-hosts='sudo nvim /etc/hosts'
 alias ed-nvim='nvim ~/.config/nvim/init.vim'
@@ -225,15 +225,20 @@ alias mvn-c='mvn compile jib:dockerBuild'
 
 # Node ----------------------------------
 
-alias npm-st='npm run start'
 alias rm-nm='rm -Rf node_modules/ && rm package-lock.json'
 
+alias npm-st='npm run start'
 alias npm-i='npm install'
 alias npm-if='npm install --force'
+
+# Angular CLI --------------------------
+
+alias ng-b='ng build'
+alias ng-bw='ng build --wath'
+
 
 # Kasper -------------------------------
 
 alias kaspSu='sudo systemctl status kesl'
 alias kaspSp='sudo systemctl stop kesl'
 alias kaspSt='sudo systemctl restart kesl'
-

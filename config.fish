@@ -1,4 +1,4 @@
-if status is-interactive
+irollif status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
@@ -183,10 +183,6 @@ function iroll
     kubepath rollout restart deployment $argv -n $nameSpaceInterno
 end
 
-function irollf
-    iroll (string split ' ' (ipodsf $argv))[1]    
-end
-
 # Homolog
 
 function hpods 
@@ -215,10 +211,6 @@ end
 
 function hroll 
     kubepath rollout restart deployment $argv
-end
-
-function hrollf
-    hroll (string split ' ' (hpodsf $argv))[1]    
 end
 
 # MVN --------------------------------------------------------------------------

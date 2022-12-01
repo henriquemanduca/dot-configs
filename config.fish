@@ -2,21 +2,21 @@ if status is-interactive
     # Commands to run in interactive sessions can go here
 end
 
-# Bins  ------------------------------
+# Bins  ------------------------------------------------------------------------
 
 # Detekt
 fish_add_path /home/henrique/Programas/detekt-cli-1.21.0/bin/
 
 oh-my-posh --init --shell fish --config ~/.poshthemes/blue-owl.omp.json | source
 
-# Configs -----------------------------
+# Configs ----------------------------------------------------------------------
 alias src='source ~/.config/fish/config.fish && cl'
 alias ed-fish='code ~/.config/fish/config.fish'
 alias ed-fish-code='code ~/.config/fish/config.fish'
 alias ed-hosts='sudo nvim /etc/hosts'
 alias ed-nvim='nvim ~/.config/nvim/init.vim'
 
-# Apps --------------------------------
+# Apps -------------------------------------------------------------------------
 
 alias g='git'
 alias gn='gitnow'
@@ -24,7 +24,7 @@ alias v='nvim'
 alias lz='lazygit'
 alias detekt-html='detekt-cli -r html:/home/henrique/detekt-reports/detekt.html'
 
-# Commands -----------------------------
+# Commands ---------------------------------------------------------------------
 
 alias l='ls'
 alias ll='ls -lh'
@@ -35,10 +35,9 @@ alias lh='ls -d .*'
 alias cl='clear'
 alias p='pwd'
 
-alias rm='rm -i'          # confirm removal
-alias cp='cp -i'          # confirm copy
-alias mv='mv -i'          # confirm move
-alias rmf='rm -rf'        # just delete it
+alias rm='rm -i'   # confirm removal
+alias mv='mv -i'   # confirm move
+alias rmf='rm -rf' # just delete it
 
 alias fd-size='sudo du -sh' # folder size
 
@@ -48,7 +47,7 @@ alias htf='history | grep'
 alias idf='ps aux | grep -i'
 alias kid='sudo kill -9'  # -9: SIGKILL
 
-# Apt ---------------------------------
+# Apt --------------------------------------------------------------------------
 
 alias up='clear && sudo apt update'
 alias upl='clear && apt list --upgradable'
@@ -61,7 +60,11 @@ alias upclean='sudo apt clean && sudo apt autoclean && sudo apt autoremove --pur
 alias inst='sudo apt install'
 alias instd='sudo dpkg -i'
 
-# Folders -----------------------------
+# Acoes ------------------------------------------------------------------------
+
+alias cp-ngx-soft='yes | cp -r /home/henrique/Projetos/softfocus2/microfront/ngx-softfocus/*'
+
+# Folders ----------------------------------------------------------------------
 
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -97,7 +100,7 @@ function bkp
     sudo rsync -aAXv . --delete --exclude={/.git,/node_modules,/lost+found} ~/Projetos/backup > backup.log
 end
 
-# Repos -----------------------------
+# Repos ------------------------------------------------------------------------
 
 function up-fish-repo
     rsync -av ~/.config/fish/config.fish ~/Projetos/pessoal/dot-configs/ 
@@ -112,7 +115,7 @@ function up-keepass-repo
     git -C /home/henrique/Projetos/pessoal/keepass push
 end
 
-# DOCKER -----------------------------
+# DOCKER -----------------------------------------------------------------------
 
 alias dk='docker'
 alias dkst='docker start'
@@ -132,7 +135,7 @@ function ptsp
     home
 end
 
-# Kubernets -----------------------------
+# Kubernets --------------------------------------------------------------------
 
 alias skf='clear && skaffold dev --port-forward'
 alias skf-b='clear && skaffold build'
@@ -218,25 +221,25 @@ function hrollf
     hroll (string split ' ' (hpodsf $argv))[1]    
 end
 
-# MVN -----------------------------------
+# MVN --------------------------------------------------------------------------
 
 alias mvn-w='mvn wrapper:wrapper'
 alias mvn-c='mvn compile jib:dockerBuild'
 
-# Node ----------------------------------
+# Node -------------------------------------------------------------------------
 
 alias rm-nm='rm -Rf node_modules/ && rm package-lock.json'
 
-alias npm-st='npm run start'
-alias npm-i='npm install'
-alias npm-if='npm install --force'
+alias npm-st='cl && npm run start'
+alias npm-i='cl && npm install'
+alias npm-if='cl && npm install --force'
 
-# Angular CLI --------------------------
+# Angular CLI ------------------------------------------------------------------
 
-alias ng-b='ng build'
-alias ng-bw='ng build --wath'
+alias ng-b='cl && ng build'
+alias ng-bw='cl && ng build --wath'
 
-# Kasper -------------------------------
+# Kasper -----------------------------------------------------------------------
 
 alias kasp-su='sudo systemctl status kesl'
 alias kasp-sp='sudo systemctl stop kesl'

@@ -60,7 +60,7 @@ alias upclean='sudo apt clean && sudo apt autoclean && sudo apt autoremove --pur
 alias inst='sudo apt install'
 alias instd='sudo dpkg -i'
 
-# Acoes ------------------------------------------------------------------------
+# Actions ------------------------------------------------------------------------
 
 alias cp-ngx-soft='yes | cp -r /home/henrique/Projetos/softfocus2/microfront/ngx-softfocus/*'
 

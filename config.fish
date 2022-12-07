@@ -16,6 +16,13 @@ alias ed-fish-code='code ~/.config/fish/config.fish'
 alias ed-hosts='sudo nvim /etc/hosts'
 alias ed-nvim='nvim ~/.config/nvim/init.vim'
 
+function up-detekt
+    soft
+    wget "https://drive.google.com/uc?export=download&id=1IWUmvijbglDpgCfrkbBOQp2Ha5o8aXkr" -O detekt-config.yml
+    clear
+    echo "Concluído!"
+end
+
 # Apps -------------------------------------------------------------------------
 
 alias g='git'

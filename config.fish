@@ -15,10 +15,10 @@ alias ed-fish='code ~/.config/fish/config.fish'
 alias ed-fish-code='code ~/.config/fish/config.fish'
 alias ed-hosts='sudo nvim /etc/hosts'
 alias ed-nvim='nvim ~/.config/nvim/init.vim'
-
+ 
 function up-detekt
-    soft
-    wget "https://drive.google.com/uc?export=download&id=1IWUmvijbglDpgCfrkbBOQp2Ha5o8aXkr" -O detekt-config.yml
+    projetos
+    wget "https://drive.google.com/uc?export=download&id=1IWUmvijbglDpgCfrkbBOQp2Ha5o8aXkr" -O detekt-config.yml --no-check-certificate
     clear
     echo "Concluído!"
 end
@@ -85,17 +85,17 @@ function hm
     home
 end
 
-function Projetos
+function projetos
     cd ~/Projetos/
 end
 
 function pessoal
-    Projetos
+    projetos
     cd pessoal/
 end
 
 function soft
-    Projetos
+    projetos
     cd softfocus2/
 end
 
@@ -125,17 +125,17 @@ end
 # DOCKER -----------------------------------------------------------------------
 
 alias dk='docker'
-alias dkst='docker start'
-alias dksp='docker stop'
+alias dk-start='docker start'
+alias dk-stop='docker stop'
 
-function ptst
+function postgres-start
    soft
    cd databases-on-docker/
    docker compose -f postgres12postgis3.yml up -d
    home
 end
 
-function ptsp
+function postgres-stop
     soft
     cd databases-on-docker/
     docker compose -f postgres12postgis3.yml down
